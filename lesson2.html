@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>lesson-1</title>
+
+    <script>
+        // задание №1
+        var a = 1, b = 1, c, d;
+        c = ++a; alert(c);           // 2   с = а+1 = 1+1  a = 2
+        d = b++; alert(d);           // 1   d=1 Инкремент после переменной b=2
+        c = (2 + ++a); alert(c);      // 5   с = 2 + (a+1) = 2 +(2+1)=5  a = 3
+        d = (2 + b++); alert(d);      // 4   d = 2 + (b+1) =2 + (1+1) b = 3
+        alert(a);                    // 3
+        alert(b);                    // 3
+
+
+        //задание №2
+        var a = 2;
+        var x = 1 + (a *= 2);  // x= 1 + (a*2) = 1 + (2*2) = 5
+
+        //задание №3
+        var a = +prompt("введите первое число");
+        var b = +prompt("введите второе число");
+
+        function calc(a, b) {
+            if (a >= 0 && b >= 0) {
+                alert("разность = " + (a - b));
+            } else if (a < 0 && b < 0) {
+                alert("произведение = " + (a * b));
+            } else {
+                alert("сумма = " + (a + b));
+            }
+        }
+        calc(a, b)
+
+        //задание №4 
+        var a = +prompt("введите первое число");
+        switch (a) {
+            case 1:
+                console.log(a);
+                a++
+            case 2:
+                console.log(a);
+                a++
+            case 3:
+                console.log(a);
+                a++
+            case 4:
+                console.log(a);
+                a++;
+            case 5:
+                console.log(a);
+                a++
+            case 6:
+                console.log(a);
+                a++
+            case 7:
+                console.log(a);
+                a++
+            case 8:
+                console.log(a);
+                a++
+            case 9:
+                console.log(a);
+                a++
+            case 10:
+                console.log(a);
+                a++;
+            case 11:
+                console.log(a);
+                a++
+            case 12:
+                console.log(a);
+                a++
+            case 13:
+                console.log(a);
+                a++
+            case 14:
+                console.log(a);
+                a++
+            case 15:
+                console.log(a);
+
+        }
+
+        //задание №4 *
+        var a = +prompt("введите число");
+        function f(a) {
+            console.log(a);
+            if (a == 15) {
+                return
+            }
+            f(a + 1)
+        }
+        f(a)
+
+        //задание №5
+        var a = +prompt("введите первое число");
+        var b = +prompt("введите второе число");
+
+        function sum(a, b) {
+            return a + b;
+        }
+        function diff(a, b) {
+            return a - b;
+        }
+        function div(a, b) {
+            return a / b;
+        }
+        function mul(a, b) {
+            return a * b;
+        }
+        alert("сумма=" + sum(a, b) + "   разность=" + diff(a, b) + "   частное=" + div(a, b) + "   произведение=" + mul(a, b))
+
+
+        //задание №6
+
+        var arg1 = +prompt("введите первое число");
+        var arg2 = +prompt("введите второе число");
+        var operation;
+        function operation() {
+            if (arg1 >= 0 && arg2 >= 0) {
+                operation = "diff";
+            } else if (arg1 < 0 && arg2 < 0) {
+                operation = "mul";
+            } else {
+                operation = "sum";
+            }
+            return operation
+        }
+        operation()
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case "diff":
+                    alert(arg1 - arg2);
+                    break;
+                case "mul":
+                    alert(arg1 * arg2);
+                    break;
+                default:
+                    alert(arg1 + arg2);
+                    break;
+            }
+
+        }
+        mathOperation(arg1, arg2, operation)
+
+
+        // задание №8
+        var val = +prompt("введите возводимое число");
+        var pow = +prompt("введите степень числа");
+        var n = 1;
+        function power(val, pow) {
+
+            n = n * val;
+
+            if (pow == 1) {
+                return n
+            }
+            power(val, pow - 1);
+
+        }
+        power(val, pow)
+        console.log(n);
+
+    </script>
+</head>
